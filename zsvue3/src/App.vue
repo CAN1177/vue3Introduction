@@ -1,20 +1,41 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Demo from './components/Demo.vue'
-</script>
-
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <waterFall />
   </div>
-  <HelloWorld msg="Vite + Vue" />
-  <Demo />
+  <!-- <HelloWorld msg="Vite + Vue" />
+  <!-- <Demo /> -->
+  <!-- <br />
+  <PassProps :num="20" :tag= "label" @update="getChildValue"  ref="childRef" /> -->
+ 
 </template>
+
+<script setup lang="ts">
+// import { onMounted, ref } from 'vue';
+// import HelloWorld from './components/HelloWorld.vue'
+// // import Demo from './components/Demo.vue'
+// import PassProps from './components/PassProps.vue'
+
+import waterFall from './components/waterfall.vue'
+
+// let label = 'w'
+
+
+// const getChildValue = (value: number) => {
+//   console.log("num is",  value)
+// }
+
+
+//注意这儿的typeof里面放的是组件名字(PassProps)不是ref的名字 ref的名字对应开头的变量名(refMenu)
+// const childRef = ref<InstanceType<typeof PassProps>>()
+// console.log("%c Line:17 🧀 childRef", "color:#b03734", childRef.value?.open());
+// const res = childRef.value?.name
+// console.log("%c Line:19 🍋 res", "color:#ea7e5c", res);
+
+// onMounted(() => {
+//   console.log(childRef.value?.open(), childRef.value?.name, "%c Line:22 ");
+// });
+
+</script>
 
 <style scoped>
 .logo {

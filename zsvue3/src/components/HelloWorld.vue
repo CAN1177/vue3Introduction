@@ -5,7 +5,7 @@ defineProps<{ msg: string }>();
 
 const count = ref(0);
 
-const arr = ["1", "2", "3"];
+// const arr = ["1", "2", "3"];
 </script>
 
 <template>
@@ -13,7 +13,7 @@ const arr = ["1", "2", "3"];
     <button type="button" @click="count++">count is {{ count }}</button>
   </div>
 
-  <div v-for="(item, index) in arr" :key="index">{{ item }}</div>
+  <!-- <div v-for="(item, index) in arr" :key="index">{{ item }}</div> -->
 </template>
 
 <style scoped lang="scss">
