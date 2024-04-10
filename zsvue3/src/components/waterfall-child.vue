@@ -23,9 +23,11 @@ const init = () => {
   const heightList: any[] = [];
   const width = 130;
   const x = document.body.clientWidth;
+  console.log("%c Line:26 🍿 x", "color:#f5ce50", x);
   const column = Math.floor(x / width);
 
   for (let i = 0; i < props.list.length; i++) {
+    // 第一行
     if (i < column) {
       props.list[i].top = 10;
       props.list[i].left = i * width;
